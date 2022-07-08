@@ -95,13 +95,18 @@ const MyOrdresPgae = () => {
             boxShadow={"dark-lg"}
             borderRadius={"25px"}
             >
-              <Image boxSize='200px' src={item.shoewImage} alt='Shoe Image' mr={"5%"}/>
+              <Image boxSize='200px' src={item.shoewImage} alt='Shoe Image' mr={"5%"}
+              maxW={{base:"200px",md:"400px"}} 
+              maxH={{base:"200px",md:"300px"}} 
+              minW={{base:"20px",md:"400px"}} 
+              minH={{base:"200px",md:"300px"}} 
+              />
               <Box
               display={"flex"}
               flexDirection={"column"}
               alignItems={"flex-start"}
               rowGap={5}
-              fontSize={30}
+              fontSize={{base:20,md:30}}
               >
                 <Text>Shoe Name : {item.shoeName}</Text>
                 <Text>Shoe Quantity : {item.qty}</Text>
