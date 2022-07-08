@@ -46,7 +46,9 @@ const UHeader = ({ children }) => {
         alignItems="center"
         justifyContent={"space-between"}
       >
-        <Image src={ShoeLogo} alt="Dan Abramov" className="shoeLogo"/>
+        <Image src={ShoeLogo} alt="Dan Abramov" className="shoeLogo" width={
+          {base:100,md:150}
+        }/>
         <Box
           bg="black"
           w="fit-content"
@@ -60,7 +62,7 @@ const UHeader = ({ children }) => {
           {children ? (
             <Button
               colorScheme="blue"
-              size="md"
+              size="sm"
               mr={3}
               onClick={() => nav("/dashboard")}
             >

@@ -202,7 +202,7 @@ useEffect(() => {
                 flexDir={"row"}
                 alignItems="flex-start"
                 justifyContent={"flex-start"}
-                fontSize={25}
+                fontSize={{base:18,ms:25}}
                 padding={"15px"}
                 boxShadow="0px 1px 11px 11px #C8C0BE"
                 // borderRadius={"20px"}
@@ -216,10 +216,13 @@ useEffect(() => {
                 <Image
                   src={`${item.shoewImage}`}
                   alt="Shoe Image"
-                  maxW={"400px"}
-                  maxHeight={"300px"}
-                  minW={"400px"}
-                  minHeight={"300px"}
+                  // maxHeight={"300px"}
+                  // minW={"400px"}
+                  // minHeight={"300px"}
+                  maxW={{base:"300px",md:"400px"}}
+                  maxH={{base:"150px",md:"300px"}}
+                  minW={{base:"100px",md:"400px"}}
+                  minH={{base:"150px",md:"300px"}}
                   mr={10}
                 />
                 <Box
@@ -236,12 +239,12 @@ useEffect(() => {
                   <Box
                   mt={4}
                   >
-                    <Button colorScheme="blue" size="md" mr={4}
+                    <Button colorScheme="blue" size={{base:"xs",md:"md"}} mr={{base:2,md:4}}
                     onClick={()=>{nav(`/userPayment`); setselectedProduct(item) }}
                     >
                       Book Now
                     </Button>
-                    <Button colorScheme="red" size="md"
+                    <Button colorScheme="red" size={{base:"xs",md:"md"}}
                     onClick={() => removeFromCart(item)}
                     >
                       Remove

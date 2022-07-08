@@ -117,7 +117,7 @@ const UPaymentPage = () => {
             flexDir={"row"}
             alignItems="flex-start"
             justifyContent={"flex-start"}
-            fontSize={25}
+            fontSize={{base:18,md:25}}
             padding={"15px"}
             boxShadow="0px 1px 11px 11px #C8C0BE"
             bg={"#F0F9D1"}
@@ -129,10 +129,15 @@ const UPaymentPage = () => {
             <Image
               src={`${selectedProduct.shoewImage}`}
               alt="Shoe Image"
-              maxW={"400px"}
-              maxHeight={"300px"}
-              minW={"400px"}
-              minHeight={"300px"}
+              // maxW={"400px"}
+              // maxHeight={"300px"}
+              // minW={"400px"}
+              // minHeight={"300px"}
+              maxW={{base:"300px",md:"400px"}}
+              maxH={{base:"150px",md:"300px"}}
+              minW={{base:"100px",md:"400px"}}
+              minH={{base:"150px",md:"300px"}}
+
               mr={10}
             />
             <Box
@@ -163,16 +168,16 @@ const UPaymentPage = () => {
                 </NumberInput>
               </FormControl>
               <Box mt={4}>
-                <Button colorScheme="blue" size="md" mr={4} onClick={FillAddressFunction}>
+                <Button colorScheme="blue" size={{base:"sm",md:"md"}} mr={4} onClick={FillAddressFunction}>
                   Address
                 </Button>
               </Box>
             </Box>
           </Box>
-          <Text ml={10} fontSize={40}>
+          <Text ml={10} fontSize={{base:30,md:40}}>
             {selectedProduct.shoetitle}
           </Text>
-          <Text ml={10} fontSize={30}>
+          <Text ml={10} fontSize={{base:20,md:30}}>
             {selectedProduct.shoeDescription}
           </Text>
         </>

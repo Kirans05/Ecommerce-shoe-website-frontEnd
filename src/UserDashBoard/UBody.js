@@ -63,6 +63,9 @@ const UBody = () => {
       
       <Box
       mt={5}
+      display={{base:"flex"}}
+      justifyContent={{base:"space-around",md:"flex-start"}}
+
       >
         <Button colorScheme="blue" size="md" mr={5}>
           Home

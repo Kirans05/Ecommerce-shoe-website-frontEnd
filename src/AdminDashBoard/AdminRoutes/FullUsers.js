@@ -88,7 +88,7 @@ const FullUsers = () => {
             />
             <SkeletonJs />
           </Box>
-          : <>
+          : <Box>
             {
               allUsers.length == 0 ? <Text>No Users To Display</Text>
               : <Box>
@@ -105,12 +105,14 @@ const FullUsers = () => {
                     ml={"3%"}
                     mr={"3%"}
                     >
-                      <Image boxSize='200px' src={item.pic} alt='User Image' mr={10}/>
+                      <Image boxSize='200px' src={item.pic} alt='User Image' mr={10}
+                      width={{base:"150px",md:"200px"}}
+                      />
                       <Box
                       display={"flex"}
                       flexDirection={"column"}
                       rowGap={3}
-                      fontSize={20}
+                      fontSize={{base:17,md:20}}
                       >
                         <Text>Name : {item.name}</Text>
                         <Text>Email : {item.email}</Text>
@@ -122,7 +124,7 @@ const FullUsers = () => {
                 }
               </Box>
             }
-            </>
+            </Box>
         }
       </Box>
       <AdFooter />

@@ -53,7 +53,9 @@ const Header = ({children}) => {
         justifyContent={"space-between"}
       >
         {/* <Image boxSize="50px" src={ShoeLogo} alt="Dan Abramov" /> */}
-        <Image src={ShoeLogo} alt="Dan Abramov" className="shoeLogo"/>
+        <Image src={ShoeLogo} alt="Dan Abramov" className="shoeLogo"
+        width={{base:"100px",md:"150px"}}
+        />
         <Box bg="black" w="fit-content" p={4} color="black"
         display={"flex"}
         flexDir={"row"}
@@ -61,14 +63,14 @@ const Header = ({children}) => {
         justifyContent="center"
         >
           {
-            children ?  <Button colorScheme='blue' size='md'  mr={3} onClick={()=>nav("/AdminDashboard")}>
+            children ?  <Button colorScheme='blue' size={{base:"sm",md:"md"}}  mr={3} onClick={()=>nav("/AdminDashboard")}>
             Home
           </Button>
           : null
           }
-          <Button colorScheme="blue" mr={4} ml={4}>
+          {/* <Button colorScheme="blue" mr={4} ml={4}>
             Admin SignUp
-          </Button>
+          </Button> */}
           <Menu>
             <MenuButton rightIcon={<ChevronDownIcon />}>
               <Avatar

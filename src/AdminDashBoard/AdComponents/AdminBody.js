@@ -88,6 +88,8 @@ const AdminBody = () => {
       <Box
       mt={4}
       mb={5}
+      display={{base:"flex"}}
+      justifyContent={{base:"space-around",md:"flex-start"}}
       >
       <Button
         colorScheme="blue"
@@ -120,7 +122,7 @@ const AdminBody = () => {
       mt={8}
       flexWrap="wrap"
       rowGap={10}
-      // bg="transparent"
+      bg="transparent"
       >
         {/* {
           data ? 
@@ -217,7 +219,15 @@ const AdminBody = () => {
           : <>
              {
           data ? 
-        <>
+        <Box
+        display={"flex"}
+        flexDir={{base:"column",md:"row"}}
+        flexWrap="wrap"
+        justifyContent={{base:"center",md:"space-around"}}
+        rowGap={{base:10,md:10}}
+        columnGap={{base:0,md:10}}
+        // border={"20px solid red"}
+        >
             {
               data.map((item,index) => {
                 return  <Box key={index}
@@ -232,11 +242,15 @@ const AdminBody = () => {
                 bg={"#BFBEC1"}
                 >
                   <Image src={`${item.shoewImage}`} alt='Shoe Image' 
-                  maxW={"400px"} 
-                  maxHeight={"300px"}
-                  minW={"400px"} 
-                  minHeight={"300px"}
-                  
+                  // maxW={"400px"} 
+                  // maxHeight={"300px"}
+                  // minW={"400px"} 
+                  // minHeight={"300px"}
+                  maxW={{base:"200px",md:"400px"}} 
+                  maxH={{base:"200px",md:"300px"}} 
+                  minW={{base:"20px",md:"400px"}} 
+                  minH={{base:"200px",md:"300px"}} 
+                              
                   />
                   <Box
                   mt={"4"}
@@ -271,7 +285,7 @@ const AdminBody = () => {
                 </Box>
               })
             }
-        </>
+        </Box>
         :
           // :  <Box
           // width={"100%"}

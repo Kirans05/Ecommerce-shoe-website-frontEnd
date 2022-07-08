@@ -63,10 +63,13 @@ const ShoeCart = ({item, cartProduct}) => {
     bg={"#BFBEC1"}
     >
       <Image src={`${item.shoewImage}`} alt='Shoe Image' 
-      maxW={"400px"} 
-      maxHeight={"300px"}
-      minW={"400px"} 
-      minHeight={"300px"}
+      // maxHeight={"300px"}
+      maxW={{base:"200px",md:"400px"}} 
+      maxH={{base:"200px",md:"300px"}} 
+      minW={{base:"20px",md:"400px"}} 
+      minH={{base:"200px",md:"300px"}} 
+      // minW={"400px"} 
+      // minHeight={"300px"}
       
       />
       <Box

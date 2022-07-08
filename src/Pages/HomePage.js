@@ -31,7 +31,7 @@ const HomePage = () => {
   return (
     <Box  className="mainContainer">
       {/* <Image boxSize="200px" src={ShoeLogo} alt="Dan Abramov" /> */}
-      <Text  onClick={onOpen} fontSize={40} className="signupbtn"
+      <Text  onClick={onOpen} fontSize={{base:20,md:40}} className="signupbtn"
       _hover={{
         cursor:"pointer"
       }}
